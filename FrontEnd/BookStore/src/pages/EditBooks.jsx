@@ -40,7 +40,7 @@ const EditBooks = () => {
     };
     setloading(true);
     axios
-      .put(`http://localhost:3000/books/${id}`, data)
+      .put(`https://mern-bookstore-app-q7rt.onrender.com/${id}`, data)
       .then(() => {
         setloading(false);
         navigate("/");
