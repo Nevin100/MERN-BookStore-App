@@ -4,7 +4,7 @@ import { Book } from "../models/BookModel.js";
 const router = express.Router();
 
 // Post Books
-router.post("/", async (req, res) => {
+router.post("https://mern-bookstore-app-q7rt.onrender.com/", async (req, res) => {
   try {
     const { title, author, PublishYear } = req.body;
     if (!title || !author || !PublishYear) {
@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
 });
 
 // Route Get all Books
-router.get("/", async (req, res) => {
+router.get("https://mern-bookstore-app-q7rt.onrender.com/", async (req, res) => {
   try {
     const books = await Book.find({});
     return res.status(200).json({
@@ -35,7 +35,7 @@ router.get("/", async (req, res) => {
 });
 
 // Route for Get One Book from database by id
-router.get("/:id", async (req, res) => {
+router.get("https://mern-bookstore-app-q7rt.onrender.com/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const book = await Book.findById(id);
@@ -47,7 +47,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Route for Update a Book:
-router.put("/:id", async (req, res) => {
+router.put("https://mern-bookstore-app-q7rt.onrender.com/:id", async (req, res) => {
   try {
     const { title, author, PublishYear } = req.body;
     if (!title || !author || !PublishYear) {
@@ -69,7 +69,7 @@ router.put("/:id", async (req, res) => {
 });
 
 //Route to delete a book:
-router.delete("/:id", async (req, res) => {
+router.delete("https://mern-bookstore-app-q7rt.onrender.com/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const result = await Book.findByIdAndDelete(id);
