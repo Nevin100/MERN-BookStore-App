@@ -44,7 +44,7 @@ const Home = () => {
           </button>
         </div>
         <div className="flex justify-between items-center">
-          <h2 className="text-3xl my-8">Books List</h2>
+          <h2 className="text-3xl text-neutral-200 my-8">Books List</h2>
           <Link to="/books/create">
             <MdOutlineAddBox className="text-sky-700 text-4xl" />
           </Link>

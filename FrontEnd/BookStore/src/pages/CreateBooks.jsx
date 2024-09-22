@@ -39,7 +39,7 @@ const CreateBooks = () => {
       <div className="p-4">
         <BackArrow />
         {loading ? <Spinner /> : ""}
-        <div className="flex flex-col border-2 border-sky-500/50 rounded-xl bg-neutral-50/10 w-[600px] p-4 mx-auto">
+        <div className="flex flex-col border-2  text-neutral-200 border-sky-500/50 rounded-xl bg-neutral-50/10 w-[600px] p-4 mx-auto">
           <h1 className="text-3xl my-4 text-center py-2 px-2 font-semibold ">
             Create Book
           </h1>

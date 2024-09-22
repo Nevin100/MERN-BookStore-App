@@ -56,14 +56,12 @@ const EditBooks = () => {
       <div className="p-4">
         <BackArrow />
         {loading ? <Spinner /> : ""}
-        <div className="flex flex-col border-2 border-sky-500/50 rounded-xl bg-neutral-50/10 w-[600px] p-4 mx-auto">
+        <div className="flex flex-col border-2 text-neutral-200 border-sky-500/50 rounded-xl bg-neutral-50/10 w-[600px] p-4 mx-auto">
           <h1 className="text-3xl my-4 text-center py-2 px-2 font-semibold ">
             Edit Book
           </h1>
           <div className="my-4">
-            <label className="text-2xl mr-4 mb-2 text-gray-500/95">
-              Title :
-            </label>
+            <label className="text-2xl mr-4 mb-2 text-white">Title :</label>
             <input
               type="text"
               value={title}
@@ -72,9 +70,7 @@ const EditBooks = () => {
             />
           </div>
           <div className="my-4">
-            <label className="text-2xl mr-4 text-gray-500/95 mb-2">
-              Author :
-            </label>
+            <label className="text-2xl mr-4 text-white mb-2">Author :</label>
             <input
               type="text"
               value={author}
@@ -83,7 +79,7 @@ const EditBooks = () => {
             />
           </div>
           <div className="my-4">
-            <label className="text-2xl mr-4 text-gray-500/95 mb-2">
+            <label className="text-2xl mr-4 pb-2 text-neutral-200 mb-2">
               Publish-Year :
             </label>
             <input
@@ -94,7 +90,7 @@ const EditBooks = () => {
             />
           </div>
           <button
-            className="bg-sky-500 text-xl text-white my-8 py-[10px] w-full rounded-lg "
+            className="bg-sky-500/80 text-xl text-white my-8 py-[10px] w-full rounded-lg "
             onClick={handleEditbook}
           >
             Edit

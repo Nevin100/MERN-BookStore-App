@@ -29,9 +29,9 @@ const DeleteBook = () => {
   };
   return (
     <>
-      <div className="p-4">
+      <div className="p-4 text-white">
         <BackArrow />
-        <h1 className="text-3xl my-4">Delete Book</h1>
+        <h1 className="text-3xl text-white my-4">Delete Book</h1>
         {loading ? <Spinner /> : " "}
         <div className="flex flex-col items-center border-2 border-sky-500 rounded-xl w-[600px] p-8 mx-auto">
           <h3 className="text-2xl">
