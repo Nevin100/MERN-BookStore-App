@@ -17,7 +17,7 @@ const EditBooks = () => {
   useEffect(() => {
     setloading(true);
     axios
-      .get(`https://mern-bookstore-backend-owzy.onrender.com/${id}`)
+      .get(`http://localhost:3000/books/${id}`)
       .then((res) => {
         setauthor(res.data.author);
         setpublishyear(res.data.PublishYear);
@@ -40,7 +40,7 @@ const EditBooks = () => {
     };
     setloading(true);
     axios
-      .put(`https://mern-bookstore-backend-owzy.onrender.com/${id}`, data)
+      .put(`http://localhost:3000/books/${id}`, data)
       .then(() => {
         setloading(false);
         navigate("/");
@@ -66,7 +66,7 @@ const EditBooks = () => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="border-2 border-gray-500/80 px-4 py-2 w-full rounded-md"
+              className="border-2 border-gray-500/80 px-4 py-2 w-full text-black rounded-md"
             />
           </div>
           <div className="my-4">
@@ -75,7 +75,7 @@ const EditBooks = () => {
               type="text"
               value={author}
               onChange={(e) => setauthor(e.target.value)}
-              className="border-2 border-gray-500/80 px-4 py-2 w-full rounded-md"
+              className="border-2 border-gray-500/80 px-4 text-black py-2 w-full rounded-md"
             />
           </div>
           <div className="my-4">
@@ -86,7 +86,7 @@ const EditBooks = () => {
               type="text"
               value={PublishYear}
               onChange={(e) => setpublishyear(e.target.value)}
-              className="border-2 border-gray-500/80 px-4 py-2 w-full rounded-md"
+              className="border-2 border-gray-500/80 px-4 py-2 w-full text-black rounded-md"
             />
           </div>
           <button

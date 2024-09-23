@@ -21,7 +21,7 @@ const CreateBooks = () => {
     };
     setloading(true);
     axios
-      .post(`https://mern-bookstore-backend-owzy.onrender.com`, data)
+      .post(`http://localhost:3000/books`, data)
       .then(() => {
         setloading(false);
         enqueueSnackbar("Book Created Successfully!!", { variant: "success" });
@@ -44,36 +44,36 @@ const CreateBooks = () => {
             Create Book
           </h1>
           <div className="my-4">
-            <label className="text-2xl mr-4 mb-2 text-gray-500/95">
+            <label className="text-2xl mr-4 mb-3 text-gray-500/95">
               Title :
             </label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="border-2 border-gray-500/80 px-4 py-2 w-full rounded-md"
+              className="border-2 text-black border-gray-500/80 px-4 py-2 w-full rounded-md"
             />
           </div>
           <div className="my-4">
-            <label className="text-2xl mr-4 text-gray-500/95 mb-2">
+            <label className="text-2xl mr-4 text-gray-500/95 mb-3">
               Author :
             </label>
             <input
               type="text"
               value={author}
               onChange={(e) => setauthor(e.target.value)}
-              className="border-2 border-gray-500/80 px-4 py-2 w-full rounded-md"
+              className="border-2  text-black border-gray-500/80 px-4 py-2 w-full rounded-md"
             />
           </div>
           <div className="my-4">
-            <label className="text-2xl mr-4 text-gray-500/95 mb-2">
+            <label className="text-2xl mr-4 text-gray-500/95 mb-3">
               Publish-Year :
             </label>
             <input
               type="text"
               value={PublishYear}
               onChange={(e) => setpubishyear(e.target.value)}
-              className="border-2 border-gray-500/80 px-4 py-2 w-full rounded-md"
+              className="border-2  text-black border-gray-500/80 px-4 py-2 w-full rounded-md"
             />
           </div>
           <button
